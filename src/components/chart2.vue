@@ -1,0 +1,134 @@
+<template>
+    <div>
+       <dv-flyline-chart-enhanced 
+       :config="config" 
+       class="flyline"
+       :dev="true">
+       </dv-flyline-chart-enhanced>
+    </div>
+</template>
+<script>
+    export default{
+        
+        data()
+        {
+            /*此处的url需要对应使用require进行导入*/
+            let mapUrl=require('../assets/1.png')
+            let iconUrl=require('../assets/2.png')
+            return{
+                
+                config:{
+                    points:[
+                    {name:'乌鲁木齐',coordinate:[0.22,0.30]},
+                    {name:'北京',coordinate:[0.69,0.37],halo:{show:true}},
+                    {name:'石家庄',coordinate:[0.66,0.41]},
+                    {name:'哈尔滨',coordinate:[0.84,0.22]},
+                    {name:'太原',coordinate:[0.62,0.43]},
+                    {name:'海口',coordinate:[0.59,0.88]},
+                    {name:'济南',coordinate:[0.69,0.45]},
+                    {name:'呼和浩特',coordinate:[0.60,0.35]},
+                    {name:'长春',coordinate:[0.81,0.29]},
+                    {name:'沈阳',coordinate:[0.80,0.35]},
+                    {name:'银川',coordinate:[0.53,0.41]},
+                    {name:'西宁',coordinate:[0.45,0.48]},
+                    {name:'兰州',coordinate:[0.49,0.51]},
+                    {name:'拉萨',coordinate:[0.23,0.62]},
+                    {name:'广州',coordinate:[0.64,0.80]},
+                    {name:'台北',coordinate:[0.77,0.75]},
+                    {name:'福州',coordinate:[0.73,0.72]},
+                    {name:'西安',coordinate:[0.57,0.52]},
+                    {name:'郑州',coordinate:[0.64,0.51]},
+                    {name:'昆明',coordinate:[0.47,0.75]},
+                    {name:'成都',coordinate:[0.50,0.62]},
+                    {name:'重庆',coordinate:[0.53,0.64]},
+                    {name:'贵阳',coordinate:[0.53,0.71]},
+                    {name:'南宁',coordinate:[0.56,0.79]},
+                    {name:'上海',coordinate:[0.76,0.59]},
+                    {name:'杭州',coordinate:[0.75,0.63]},
+                    {name:'南京',coordinate:[0.73,0.59]},
+                    {name:'合肥',coordinate:[0.70,0.60]},
+                    {name:'武汉',coordinate:[0.65,0.62]},
+                    {name:'长沙',coordinate:[0.63,0.66]},
+                    {name:'南昌',coordinate:[0.68,0.66]},
+                    ],
+                    lines:[{source:'乌鲁木齐',target:'北京'},
+                        {source:'石家庄',target:'北京'},
+                        {source:'哈尔滨',target:'北京'},
+                        {source:'太原',target:'北京'},
+                        {source:'海口',target:'北京'},
+                        {source:'济南',target:'北京'},
+                        {source:'呼和浩特',target:'北京'},
+                        {source:'长春',target:'北京'},
+                        {source:'沈阳',target:'北京'},
+                        {source:'西宁',target:'北京'},
+                        {source:'兰州',target:'北京'},
+                        {source:'拉萨',target:'北京'},
+                        {source:'广州',target:'北京',color:'#fb7293'},
+                        {source:'台北',target:'北京'},
+                        {source:'福州',target:'北京'},
+                        {source:'西安',target:'北京'},
+                        {source:'郑州',target:'北京'},
+                        {source:'昆明',target:'北京'},
+                        {source:'成都',target:'北京'},
+                        {source:'重庆',target:'北京'},
+                        {source:'贵阳',target:'北京'},
+                        {source:'南宁',target:'北京'},
+                        {source:'上海',target:'北京',color:'#8378ea'},
+                        {source:'杭州',target:'北京'},
+                        {source:'南京',target:'北京'},
+                        {source:'武汉',target:'北京'},
+                        {source:'长沙',target:'北京'},
+                        {source:'南昌',target:'北京'},
+                    ],
+                    bgImgSrc:mapUrl,
+                    icon:{
+                        show:true,
+                        src:iconUrl,
+                        width:5,
+                        height:5,
+                    },
+                    text:{
+                        show:true
+                    }
+                }
+              
+            }
+        },
+        mounted() {
+          
+        },
+        methods:{
+          
+        }
+    }
+</script>
+<style scoped>
+.picture0{
+    position:absolute;
+    width:300px;
+    height:300px;
+    top:50px;
+    left:50px;
+    
+}
+.picture1{
+    position:absolute;
+    width:300px;
+    height:300px;
+    top:300px;
+    left:50px;
+}
+.picture2{
+    position:absolute;
+    width:300px;
+    height:300px;
+}
+.flyline{
+    position:absolute;
+    left:50px;
+    top:10px;
+    width:800px;
+    height:480px;
+   
+}
+</style>
